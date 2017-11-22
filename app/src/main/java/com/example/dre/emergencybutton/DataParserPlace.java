@@ -59,6 +59,7 @@ public class DataParserPlace {
         String longitude = "";
         String reference = "";
         String phoneNumber = "";
+        String address = "-NA-";
 
         Log.d("getPlace", "Entered");
 
@@ -69,17 +70,22 @@ public class DataParserPlace {
             if (!googlePlaceJson.isNull("vicinity")) {
                 vicinity = googlePlaceJson.getString("vicinity");
             }
-            if(!googlePlaceJson.isNull("international_phone_number")){
-                phoneNumber = googlePlaceJson.getString("international_phone_number");
+            if(!googlePlaceJson.isNull("formatted_phone_number")){
+                phoneNumber = googlePlaceJson.getString("formatted_phone_number");
+            }
+            if(!googlePlaceJson.isNull("formatted_adress")){
+                address = googlePlaceJson.getString("formatted_address");
             }
             latitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lat");
             longitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lng");
             phoneNumber = googlePlaceJson.getString("formatted_phone_number");
+            address = googlePlaceJson.getString("formatted_address");
             reference = googlePlaceJson.getString("reference");
 
             googlePlaceMap.put("place_name", placeName);
             googlePlaceMap.put("vicinity", vicinity);
             googlePlaceMap.put("phoneNumber", phoneNumber);
+            googlePlaceMap.put("address", address);
             googlePlaceMap.put("lat", latitude);
             googlePlaceMap.put("lng", longitude);
             googlePlaceMap.put("reference", reference);
