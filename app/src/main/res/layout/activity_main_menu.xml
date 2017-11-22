@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dre.emergencybutton.MainMenu"
+    android:padding="16dp"
+    android:weightSum="1"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/haloUserText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Halo, User"/>
+
+
+   <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/group1"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/haloUserText"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp">
+
+       <ImageView
+           android:src="@drawable/police"
+           android:layout_width="40dp"
+           android:layout_height="40dp" />
+
+        <RadioButton
+            android:id="@+id/kantorPolisi"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false" />
+
+       <ImageView
+           android:src="@drawable/hospital"
+           android:layout_width="40dp"
+           android:layout_height="40dp" />
+
+        <RadioButton
+            android:id="@+id/rumahSakit"
+            android:textSize="20sp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"/>
+
+       <ImageView
+           android:src="@drawable/damkar"
+           android:layout_width="40dp"
+           android:layout_height="40dp" />
+
+        <RadioButton
+            android:id="@+id/pemadamKebakaran"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="false"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/redButton"
+        android:layout_width="225dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/selectorbutton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            style="@style/Widget.AppCompat.Button"
+            android:id="@+id/feedbackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:text="Send Feedback" />
+
+        <Button
+            style="@style/Widget.AppCompat.Button"
+            android:id="@+id/howToButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="20dp"
+            android:padding="12dp"
+            android:backgroundTint="#009688"
+            android:text="Cara Penggunaan" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

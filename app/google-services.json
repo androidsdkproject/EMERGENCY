@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "650943830499",
+    "firebase_url": "https://emergencybutton-d3cc7.firebaseio.com",
+    "project_id": "emergencybutton-d3cc7",
+    "storage_bucket": "emergencybutton-d3cc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650943830499:android:f2ffe14088fa4df9",
+        "android_client_info": {
+          "package_name": "com.example.dre.emergencybutton"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650943830499-2r3ejl2vhll8anrb17ibp6jciiv3pi0b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.dre.emergencybutton",
+            "certificate_hash": "8a708a68bf42511e3d68f511f5e00afbaa1582dd"
+          }
+        },
+        {
+          "client_id": "650943830499-qfs8vvpus9m0p5kvpoee42a1did0kt1b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBVJLjkAO9o4c4sQMCOTpquizJqjfklEuI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650943830499-qfs8vvpus9m0p5kvpoee42a1did0kt1b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

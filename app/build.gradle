@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.example.dre.emergencybutton"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 4
+        versionName "4.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.google.android.gms:play-services-maps:11.0.4'
+    compile 'com.google.firebase:firebase-database:10.0.1'
+    testCompile 'junit:junit:4.12'
+}
+
+//DOCUMENTATION:
+/*
+    v1.0 :
+    Very ugly UI, not much functionality
+
+    v2.0 :
+    Major change to UI
+    Adding Email form
+    Adding call functionality
+    Adding persistent notification so you can access it literally from any apps
+    Fix Crash when pressing the Call button and Emergency Desktop Apps. Now functioning properly
+
+    v2.1 :
+    Change the Red Button Icon to more "Bionic"
+    Change from Linear Layout to Relative for the parent layout
+    Lock the orientation to ALWAYS Potrait
+
+    v2.2 :
+    Adding Pemadam Kebakaran Function
+    Minor UI Change
+    Adding function to check if form fields is empty
+
+    v2.3 :
+    Adding Born Date & Gender Radio Group on Sign Up Form
+
+    v3.0 :
+    Change Name from EmergencyButton to EMERGENCY
+
+    v4.0 :
+    A LOT OF CHANGE. I mean. A lot.
+ */
+
+//TO DO LISTS :
+/*
+    1. Implementing the Google Maps API
+    2. Implementing Emergency Apps (Hopefully)
+ */
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#9C27B0"
+        android:text="Pemadam Kebakaran Terdekat : "/>
+
+    <TextView
+        android:layout_marginTop="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="25dp"
+        android:lines="2"
+        android:textAlignment="center"
+        android:text="Pos Pemadam Kebakaran Summarecon Serpong"/>
+
+    <TextView
+        android:layout_marginTop="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="Jl. Curug Sangereng, Kelapa Dua, Curug Sangereng, Tangerang, Banten 15810"/>
+
+    <TextView
+        android:layout_marginTop="10px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#7C4DFF"
+        android:text="(021) 29177377"/>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="30px">
+
+        <Button
+            android:id="@+id/button_callPhone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1DE9B6"
+            android:text="Call"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp" />
+    </RelativeLayout>
+</LinearLayout>

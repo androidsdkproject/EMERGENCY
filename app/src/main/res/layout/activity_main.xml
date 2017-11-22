@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView01"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:scrollbars="vertical"
+    android:background="#D32F2F">
+
+
+
+    <ImageView
+        android:id="@+id/logoWelcomeScreen"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_width="700px"
+        android:layout_height="700px"
+        android:src="@drawable/logo" />
+
+
+</RelativeLayout>
