@@ -15,6 +15,7 @@ public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
     String googlePlacesData;
     String url;
     Double lat1, lng1;
+    List<HashMap<String, String>> nearbyPlacesList;
 
     GetNearbyPlacesData(Double lat, Double lng) {
         this.lat1 = lat;

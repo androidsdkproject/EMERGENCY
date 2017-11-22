@@ -25,10 +25,14 @@ import android.widget.Toast;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.UiSettings;
 
+import java.util.HashMap;
+import java.util.List;
+
 
 public class MainMenu extends AppCompatActivity {
     public static final int NOTIFICATION_ID = 13;
     public static final int PROXIMITY_RADIUS = 10000;
+    List<HashMap<String, String>> nearbyPlacesList;
     double latitude;
     double longitude;
     private GoogleMap map;
@@ -98,15 +102,16 @@ public class MainMenu extends AppCompatActivity {
 
                     Button callPhone = viewDialog.findViewById(R.id.button_callPhone);
 
+                    String url = getUrl(latitude, longitude,"hospital");
+                    Object[] DataTransfer = new Object[3];
+                    DataTransfer[0] = url;
+                    GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData(latitude,longitude);
+                    getNearbyPlacesData.execute(DataTransfer);
+
+
                     //BUG :: Kalo di set ACTION_CALL crash
                     callPhone.setOnClickListener(new View.OnClickListener(){
                         public void onClick (View view){
-
-                            String url = getUrl(latitude, longitude,"hospital");
-                            Object[] DataTransfer = new Object[2];
-                            DataTransfer[0] = url;
-                            GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData(latitude,longitude);
-                            getNearbyPlacesData.execute(DataTransfer);
 
 
                             Intent call = new Intent(Intent.ACTION_CALL);

@@ -74,7 +74,7 @@ public class DataParserPlace {
             }
             latitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lat");
             longitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lng");
-            phoneNumber = googlePlaceJson.getString("international_phone_number");
+            phoneNumber = googlePlaceJson.getString("formatted_phone_number");
             reference = googlePlaceJson.getString("reference");
 
             googlePlaceMap.put("place_name", placeName);
