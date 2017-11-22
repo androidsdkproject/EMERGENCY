@@ -14,7 +14,7 @@ import java.util.List;
  * Created by Dre on 22-Nov-17.
  */
 
-public class DataParserClass {
+public class DataParserPlace {
     public List<HashMap<String, String>> parse(String jsonData) {
         JSONArray jsonArray = null;
         JSONObject jsonObject;
@@ -58,6 +58,7 @@ public class DataParserClass {
         String latitude = "";
         String longitude = "";
         String reference = "";
+        String phoneNumber = "";
 
         Log.d("getPlace", "Entered");
 
@@ -68,11 +69,17 @@ public class DataParserClass {
             if (!googlePlaceJson.isNull("vicinity")) {
                 vicinity = googlePlaceJson.getString("vicinity");
             }
+            if(!googlePlaceJson.isNull("international_phone_number")){
+                phoneNumber = googlePlaceJson.getString("international_phone_number");
+            }
             latitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lat");
             longitude = googlePlaceJson.getJSONObject("geometry").getJSONObject("location").getString("lng");
+            phoneNumber = googlePlaceJson.getString("international_phone_number");
             reference = googlePlaceJson.getString("reference");
+
             googlePlaceMap.put("place_name", placeName);
             googlePlaceMap.put("vicinity", vicinity);
+            googlePlaceMap.put("phoneNumber", phoneNumber);
             googlePlaceMap.put("lat", latitude);
             googlePlaceMap.put("lng", longitude);
             googlePlaceMap.put("reference", reference);

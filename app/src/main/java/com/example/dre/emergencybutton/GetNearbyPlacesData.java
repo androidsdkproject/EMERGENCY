@@ -1,17 +1,17 @@
 package com.example.dre.emergencybutton;
 
+import android.os.AsyncTask;
 import android.util.Log;
 
 import java.util.HashMap;
 import java.util.List;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.UiSettings;
 
 /**
  * Created by Dre on 22-Nov-17.
  */
 
-public class GetNearbyPlacesData {
+public class GetNearbyPlacesData extends AsyncTask<Object, String, String> {
+
     String googlePlacesData;
     String url;
     Double lat1, lng1;
@@ -43,7 +43,12 @@ public class GetNearbyPlacesData {
         List<HashMap<String, String>> nearbyPlacesList = null;
         DataParserPlace dataParserPlace = new DataParserPlace();
         nearbyPlacesList = dataParserPlace.parse(result);
+
+        for(int i=0; i<nearbyPlacesList.size(); i++){
+            String placeName = nearbyPlacesList.get(i).get("placeName");
+            String phoneNumber = nearbyPlacesList.get(i).get("phoneNumber");
+        }
+
         Log.d("GooglePlacesReadTask", "onPostExecute Exit" + result);
     }
-
 }

@@ -108,6 +108,7 @@ public class MainMenu extends AppCompatActivity {
                             GetNearbyPlacesData getNearbyPlacesData = new GetNearbyPlacesData(latitude,longitude);
                             getNearbyPlacesData.execute(DataTransfer);
 
+
                             Intent call = new Intent(Intent.ACTION_CALL);
                             call.setData(Uri.parse("tel:(0542) 11102"));
 
